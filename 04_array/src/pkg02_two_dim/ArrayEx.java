@@ -238,7 +238,7 @@ public class ArrayEx {
   
   public static void main(String[] args) {
     // 메소드를 실행하기위해선 호출을해줘야함 => 메소드();
-    ex3();
+    ex4();
   }
   
 }
