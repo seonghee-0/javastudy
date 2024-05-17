@@ -24,8 +24,8 @@ public class PersonEx {
     person.method7(1);
     person.method7(2, 3);
     person.method7(4, 5, 6);
-    /* method7 - 인자 개수가 변하는 가변인자 */
-    
+    /* method7 - 인자 개수가 변하는(정해져있지않을때) 가변인자 */
+    // void method7(int... numbers) {// 가변인자는 ...으로 사용
 
   }
 

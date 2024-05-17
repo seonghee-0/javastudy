@@ -12,6 +12,17 @@ public class CalculatorEx {
     int result = subtractor.minus(3, 2);
     System.out.println(result);
  
+    Compare compare = new Compare();
+    int number1 = 3;
+    int number2 = 2;
+    
+    if(compare.isBig(number1, number2)) {
+      System.out.println(number1 + " is big.");
+    }else {
+      System.out.println(number2 + " is big.");      
+    }
+    
+    
   }
 
 }
