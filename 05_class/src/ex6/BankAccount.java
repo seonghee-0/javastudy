@@ -57,6 +57,7 @@ public class BankAccount {
     //위의 두줄을 더 짧게 한줄로 정리했을 때!
     otherAc.deposit(withdrawal(money));
     System.out.println(money + "원 이체 완료!");
+    
   } 
 
   
