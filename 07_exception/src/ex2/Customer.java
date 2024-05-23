@@ -49,11 +49,7 @@ public class Customer {
        this.money -= money;
        this.count += breadChange.getBread();
        this.money += breadChange.getChange();
-       
      }
-    
-      
-    
     
   }
   
