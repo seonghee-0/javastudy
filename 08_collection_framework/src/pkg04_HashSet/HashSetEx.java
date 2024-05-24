@@ -46,8 +46,7 @@ public class HashSetEx {
     webtoons.add(webtoon1);
     webtoons.add(webtoon2);
     
-    
-    // 일반 for문 은 사용 불가, 향상 for 문 사용 가능.
+    // 일반 for 문 은 사용 불가, 향상 for 문 사용 가능.
     for(Webtoon webtoon : webtoons) { 
       System.out.println(webtoon);
     }

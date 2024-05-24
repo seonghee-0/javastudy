@@ -55,7 +55,7 @@ public class ArrayListEx {
   }
   
   public static void ex3() {
-    // ArrayList <E> 초기화하기(배열/가변인자) 
+    // ArrayList<E> 초기화하기(배열/가변인자) 
     List<Integer> numbers = Arrays.asList(1, 2, 3);
     
     // List <E>는 toString 오버라이드 되어있다.
@@ -91,7 +91,6 @@ public class ArrayListEx {
     }else {
       System.out.println(target + "삭제성공");
     } 
-   
    System.out.println(menu);
   }
   
@@ -107,13 +106,10 @@ public class ArrayListEx {
     for(Webtoon webtoon : webtoons) {
       System.out.println(webtoon);
     }
-    
-    
   }
   
   public static void main(String[] args) {
     ex5();
-    
   }
 
 }

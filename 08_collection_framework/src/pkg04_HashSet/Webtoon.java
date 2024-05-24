@@ -56,12 +56,12 @@ public class Webtoon {
     this.createDt = createDt;
   }
 
-
+  // toString() 오버라이드
   @Override
   public String toString() {
-    return "Webtoon [ num = "+ num + ", title = "+ title + ", star = "+ star + ", createDt = "+ createDt + "]";
+    return "Webtoon [num=" + num + ", title=" + title + ", star=" + star + ", createDt=" + createDt + "]";
   }
-
+  
   @Override
   public int hashCode() {
     return Objects.hash(createDt, num, star, title);

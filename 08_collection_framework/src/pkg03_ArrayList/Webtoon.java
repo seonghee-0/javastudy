@@ -55,9 +55,11 @@ public class Webtoon {
   }
 
 
-  @Override
-  public String toString() {
-    return super.toString();
-  }
+//toString() 오버라이드
+ @Override
+ public String toString() {
+   return "Webtoon [num=" + num + ", title=" + title + ", star=" + star + ", createDt=" + createDt + "]";
+ }
+ 
   
 }
