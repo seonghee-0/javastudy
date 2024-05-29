@@ -7,15 +7,29 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class OutputStreamEx {
-
+  /* Stream 이란?  
+   * - 데이터 흐름 
+   * - 프로그램은 외부에서 데이터를 읽거나 외부로 데이터를 출력하는 작업이 빈번하게 일어나는데,
+   *    이때 데이터는 어떠한 통로를 통해서 데이터가 이동된다. 이 통로를 Stream 이라고 한다.
+   */
+  
+  /*
+   * < 메소드(Method) >                             < 설명 >
+   * void close()                               OutputStream을 닫는다.
+   * void flush()                               버퍼에 남아있는 출력 스트림을 출력한다.
+   * void write(byte[] b)                       버퍼의 내용을 출력한다. 
+   * void write(byte[] b, int off, int len)     b 배열 안에 있는 시작 off 부터 len 만큼 출력한다.
+   */
   
   /*
    * < java.io.OutputStream >
-   * 1. ★바이트 기반★의 출력 스트림이다.
+   * 1. ★바이트★ 기반의 출력 스트림이다.
    * 2. 모든 바이트 기반 출력 스트림의 슈퍼 클래스이다.
    * 3. 출력 단위
    *    1) int
    *    2) byte[] 
+   *    - 바이트단위 입출력 스트림 : 그림, 멀티미디어, 문자 등 모든 종류의 데이터들을 주고받을 수 있다.
+   *    - 문자단위 입출력 스트림 : 오로직 문자만 주고받을 수 있게 특화되어 있다.
    */
 
   public static void ex1() {
@@ -116,7 +130,7 @@ public class OutputStreamEx {
        
        String s = "hello world";
        byte[] b = s.getBytes();
-       out.write(b, 0, 5) ; //index b 에서 0~5까지 "hello"출력
+       out.write(b, 0, 5) ; //index b 에서 0~5까지 "hello"를 파일에 출력
        
        out.flush(); ///선택구문
        
@@ -128,7 +142,7 @@ public class OutputStreamEx {
     
   }
   public static void main(String[] args) {
-    ex2();
+    ex3();
   }
 
 }

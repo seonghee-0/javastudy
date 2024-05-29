@@ -20,11 +20,10 @@ public class StringBuilderEx {
     builder.append("나");
     builder.append("나");
     
+    String result = builder.toString(); // builder 는 최종적으로는 string 으로 바꿔서 확인하는게 좋다.
     // StringBuilder 객체를 String 객체로 바꾸는 방법
     // 1. new String(builder)
     // 2. builder.toString()
-    
-    String result = builder.toString();
     System.out.println(result);
 
   }

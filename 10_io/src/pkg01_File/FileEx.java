@@ -37,7 +37,7 @@ public class FileEx {
     
     // 디렉터리 삭제하기 ( 빈 디렉터리만 삭제 가능하다)
     if(dir.exists()) { 
-      System.out.println(dir.getPath() + "삭제 완료"); //getPath():경로
+      System.out.println(dir.getPath() + "삭제 완료"); //getPath() => 경로출력
       dir.delete();
     }
   }
