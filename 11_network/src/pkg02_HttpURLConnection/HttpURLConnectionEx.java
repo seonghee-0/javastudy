@@ -1,5 +1,9 @@
 package pkg02_HttpURLConnection;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -19,7 +23,7 @@ public class HttpURLConnectionEx {
     
     try {
       
-      url = URI.create(spec).toURL();
+      url = URI.create(spec).toURL(); // url 생성
       con = (HttpURLConnection) url.openConnection(); // casting 해야함
       
       /*
@@ -87,8 +91,58 @@ public class HttpURLConnectionEx {
     //접속해제
      con.disconnect();
 } 
+  public static void ex3() {
+    String spec = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png";
+    URL url = null;
+    HttpURLConnection con = null;
+    
+    BufferedInputStream in = null;
+    BufferedOutputStream out = null;
+   
+    try {
+      
+      url = URI.create(spec).toURL();
+      con = (HttpURLConnection) url.openConnection();
+      
+      con.connect();
+      
+      int responseCode = con.getResponseCode();
+      if(responseCode != HttpURLConnection.HTTP_OK) {
+        throw new RuntimeException("접속 실패");
+      }
+      
+      in = new BufferedInputStream(con.getInputStream());
+      
+      File dir = new File("/storage");
+      if(!dir.exists()) {
+        dir.mkdirs();
+      }
+      File file = new File(dir, "google-logo.png");
+      
+      out = new BufferedOutputStream(new FileOutputStream(file));
+      
+      byte[] b = new byte[10];
+      int readByte = 0;
+      // 10바이트 읽기→ /storage/google-logo.png : 끝날때 까지 반복
+      // 파일 출력 스트림이 필요함
+      
+      while((readByte = in.read(b)) != -1) {
+        out.write(b, 0, readByte);
+      }
+      System.out.println(file.getPath() + "생성완료");
+          
+    in.close();
+    out.close();
+      
+    } catch (IOException | RuntimeException e) {
+      e.printStackTrace();
+    }      
+    // 접속해제
+    con.disconnect();
+  }
+  
   public static void main(String[] args) {
-    ex2();
+    ex3();
   }
 
 }

@@ -67,7 +67,7 @@ public class ReaderEx {
       StringBuilder builder = new StringBuilder();
       String line = null;
       // 읽은게없으면 -1이 아닌 null 을 반환한다.(string 이기 때문)
-      while((line = in.readLine()) != null) {
+      while((line = in.readLine()) != null) { // 한줄씩 읽어들이는 readLine
         builder.append(line + "\n");
       }
       
@@ -102,7 +102,7 @@ public class ReaderEx {
   
   
   public static void main(String[] args) {
-    ex2();
+    ex1();
   }
   
   
