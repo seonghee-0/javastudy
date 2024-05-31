@@ -80,7 +80,7 @@ public class NaverSearchApiEx {
     // JSON 라이브러리
     // 1. 객체 : org.json.JSONObject
     // 2. 배열 : org.json.JSONArray
-    
+    //JSON 파싱 : JSON 형식의 문자열을 자바객체로 변
     // JSON 라이브러리 사용 방법
     /*
      * JSONObject obj = {
@@ -99,11 +99,11 @@ public class NaverSearchApiEx {
      * obj.getString("name") == "kim"
      * obj.getInt("age")     == 20
      * obj.getJSONObject("home")   == {"address": "seoul", "phone": "010-1111-1111"}
-     *   obj.getJSONObject("home").getString("address") == "seoul"
-     *   obj.getJSONObject("home").getString("phone")   == "010-1111-1111"
+     * obj.getJSONObject("home").getString("address") == "seoul"
+     * obj.getJSONObject("home").getString("phone")   == "010-1111-1111"
      * obj.getJSONArray("hobbies") == ["game", "travel"]
-     *   obj.getJSONArray("hobbies").getString(0) == "game"
-     *   obj.getJSONArray("hobbies").getString(1) == "travel"
+     * obj.getJSONArray("hobbies").getString(0) == "game"
+     * obj.getJSONArray("hobbies").getString(1) == "travel"
      */
     File dir = new File("/storage/" + query + new SimpleDateFormat("yyyyMMddhhmmss").format(new Date()));
     
